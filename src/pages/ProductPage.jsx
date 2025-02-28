@@ -7,7 +7,7 @@ const ProductPage = () => {
   const { data, loading, error } = useFetch(
     "http://localhost:5000/product/products","GET"
   );
-  console.log(data);
+
   if (data?.products) {
     setProducts(data?.products);
   }
