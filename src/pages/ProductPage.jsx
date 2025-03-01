@@ -22,7 +22,7 @@ const ProductPage = () => {
   }
   return (
     <div className="container my-3">
-      {loading && data.products.length === 0 && <p>Loading...</p>}
+      {loading && products.length === 0 && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <div className="d-flex gap-5">
         {products.length > 0 &&
