@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFetch } from "../useFetch";
 import { useProductsContext } from "../contexts/productsContextProvider";
 import axios from 'axios'
@@ -8,10 +8,11 @@ const ProductPage = () => {
   const { data, loading, error } = useFetch(
     "https://cart-management-backend-one.vercel.app/product/products","GET"
   );
-  if (data?.products) {
-    setProducts(data?.products);
-  }
-  console.log(products);
+  useEffect(() => {
+    if (data?.products) {
+      setProducts(data?.products);
+    }
+  },[products])
 
   const handleAddToCart = async(e,prod) => {
     e.preventDefault()
