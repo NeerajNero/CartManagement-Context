@@ -6,7 +6,7 @@ import axios from 'axios'
 const ProductPage = () => {
   const { products, setProducts, cart, setCart } = useProductsContext();
   const { data, loading, error } = useFetch(
-    "http://localhost:5000/product/products","GET"
+    "https://cart-management-backend-one.vercel.app/product/products","GET"
   );
   if (data?.products) {
     setProducts(data?.products);
