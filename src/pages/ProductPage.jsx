@@ -4,7 +4,7 @@ import { useProductsContext } from "../contexts/productsContextProvider";
 import axios from 'axios'
 
 const ProductPage = () => {
-  const { products, setProducts, cart, setCart } = useProductsContext();
+  const { products, setProducts, setCart } = useProductsContext();
   const { data, loading, error } = useFetch(
     "https://cart-management-backend-one.vercel.app/product/products","GET"
   );
