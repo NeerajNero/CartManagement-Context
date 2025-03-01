@@ -12,7 +12,7 @@ const ProductPage = () => {
     if (data?.products) {
       setProducts(data?.products);
     }
-  },[setProducts])
+  },[data?.products])
 
   const handleAddToCart = async(e,prod) => {
     e.preventDefault()
