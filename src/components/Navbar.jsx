@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 const Navbar = () => {
     const {cart,setCart} = useProductsContext()
-    const {data,loading,error} = useFetch("http://localhost:5000/cart/cart","GET")
+    const {data,loading,error} = useFetch("https://cart-management-backend-one.vercel.app/cart/cart","GET")
     console.log(data)
     useEffect(() => {
       if (data?.cart) {

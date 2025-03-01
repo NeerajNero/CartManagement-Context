@@ -15,7 +15,7 @@ const ProductPage = () => {
 
   const handleAddToCart = async(e,prod) => {
     e.preventDefault()
-    const response = await axios.post("http://localhost:5000/cart/addToCart",{productId: prod._id})
+    const response = await axios.post("https://cart-management-backend-one.vercel.app/cart/addToCart",{productId: prod._id})
     console.log(response.data.cart)
     setCart((prevData) => [...prevData, response.data.cart]);
   }
