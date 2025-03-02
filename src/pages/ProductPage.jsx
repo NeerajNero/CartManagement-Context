@@ -32,7 +32,7 @@ const ProductPage = () => {
               <div className="card-body">
                 <h5 className="card-title">{prod.name}</h5>
                 <p className="card-text">
-                  Price: {prod.price}
+                  <strong>Price:</strong> {prod.price}
                 </p>
                 <button onClick={(e) => handleAddToCart(e,prod)} className="btn btn-primary">
                   Add To Cart
